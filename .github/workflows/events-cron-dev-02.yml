@@ -1,0 +1,17 @@
+name: Daily Task
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 00:00 UTC
+
+jobs:
+  daily-job: 
+    # 메인 브랜치일때
+    if: github.ref == 'refs/heads/main' 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print current date and time
+        run: |
+          echo "This runs every day at midnight (UTC)."
+          date -u +"Current UTC time: %Y-%m-%d %H:%M:%S"
