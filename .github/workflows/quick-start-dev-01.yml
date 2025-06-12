@@ -1,9 +1,9 @@
-name: dev_01-기본예제-2025-06-12 # 브랜치 이름과 통일
+name: dev_01-기본예제-2025-06-12
 
 on:
   push:
     branches:
-      - dev_01-기본예제-2025-06-12 # 브랜치 이름과 통일
+      - dev_01-기본예제-2025-06-12
 jobs:
   dev-01-example-actions:
     runs-on: ubuntu-latest
